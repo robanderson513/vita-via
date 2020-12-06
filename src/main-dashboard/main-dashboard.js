@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../logo.svg";
-import "./home-page.css";
+import "./main-dashboard.css";
 
-class HomePage extends React.Component {
+class MainDashboard extends React.Component {
   render() {
     return (
       <div className="App">
@@ -24,4 +24,4 @@ class HomePage extends React.Component {
     );
   }
 }
-export default HomePage;
+export default MainDashboard;

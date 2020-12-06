@@ -1,6 +1,6 @@
 import React from "react";
-//import "./lower-nav.css";
-class Diet extends React.Component {
+
+class NutritionDashboard extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,4 +14,4 @@ class Diet extends React.Component {
     );
   }
 }
-export default Diet;
+export default NutritionDashboard;

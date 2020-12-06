@@ -1,5 +1,5 @@
 import React from "react";
-import "./lower-nav.css";
+import "./bottom-nav.css";
 import {
   faHome,
   faUtensils,
@@ -8,24 +8,24 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-class LowerNav extends React.Component {
+class BottomNav extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div className="lower-nav">
+      <div className="bottom-nav">
         <Link to="/exercise">
           <FontAwesomeIcon className="nav-icon" icon={faDumbbell} />
         </Link>
         <Link to="/">
           <FontAwesomeIcon className="nav-icon" icon={faHome} />
         </Link>
-        <Link to="/diet">
+        <Link to="/nutrition">
           <FontAwesomeIcon className="nav-icon" icon={faUtensils} />
         </Link>
       </div>
     );
   }
 }
-export default LowerNav;
+export default BottomNav;

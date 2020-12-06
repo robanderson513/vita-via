@@ -1,10 +1,10 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import HomePage from "./home-page/home-page";
-import Diet from "./diet/diet";
-import Exercise from "./exercise/exercise";
-import LowerNav from "./lower-nav/lower-nav";
-import SideNav from "./side-nav/side-nav";
+import HomePage from "./main-dashboard/main-dashboard";
+import NutritionDashboard from "./nutrition/nutrition-dashboard/nutrition-dashboard";
+import ExerciseDashboard from "./exercise/exercise-dashboard/exercise-dashboard";
+import BottomNav from "./navigation/bottom-nav/bottom-nav";
+import SideNav from "./navigation/side-nav/side-nav";
 import "./App.css";
 
 class App extends React.Component {
@@ -13,12 +13,12 @@ class App extends React.Component {
       <div>
         <div>
           <Route path="/" exact component={HomePage} />
-          <Route path="/diet" exact component={Diet} />
-          <Route path="/exercise" exact component={Exercise} />
+          <Route path="/nutrition" exact component={NutritionDashboard} />
+          <Route path="/exercise" exact component={ExerciseDashboard} />
         </div>
         <div>
           <SideNav></SideNav>
-          <LowerNav></LowerNav>
+          <BottomNav></BottomNav>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-.lower-nav {
+.bottom-nav {
   position: fixed;
   bottom: 0;
   height: 8vh;
@@ -8,18 +8,12 @@
   justify-content: space-around;
 }
 
-.lower-nav > button {
-  background: transparent;
-  outline: none;
-  border: none;
-}
-
 .nav-icon:active {
   color: rgb(189, 189, 189);
 }
 
 @media only screen and (min-width: 375px) {
-  .lower-nav {
+  .bottom-nav {
     visibility: hidden;
   }
 }

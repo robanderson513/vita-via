@@ -1,6 +1,6 @@
 import React from "react";
-//import "./lower-nav.css";
-class Exercise extends React.Component {
+
+class ExerciseDashboard extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,4 +14,4 @@ class Exercise extends React.Component {
     );
   }
 }
-export default Exercise;
+export default ExerciseDashboard;
