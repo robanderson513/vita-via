@@ -13,6 +13,6 @@ app.use(function (req, res, next) {
     next();
 });
 app.use("/user", user_routes_1.default);
-app.get("/", (req, res) => res.send("HomePage"));
+app.get("/", (req, res) => res.send("No"));
 app.listen(PORT, () => console.log("Server started"));
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=index.js.map

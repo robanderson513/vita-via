@@ -11,5 +11,5 @@ app.use(function (req, res, next) {
 });
 
 app.use("/user", usersRouter);
-app.get("/", (req, res) => res.send("HomePage"));
+app.get("/", (req, res) => res.send("No"));
 app.listen(PORT, () => console.log("Server started"));
