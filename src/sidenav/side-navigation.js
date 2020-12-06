@@ -9,7 +9,7 @@ class SideNav extends React.Component {
     return (
       <div
         className="sidenav"
-        style={{ width: !this.props.isCollapsed ? "250px" : "0" }}
+        style={{ width: !this.props.isCollapsed ? "45vw" : "0" }}
       >
         <p style={{ color: "white" }}>I'm a side Chiho</p>
       </div>

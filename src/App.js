@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from "./logo.svg";
 import "./App.css";
 import SideNav from "./sidenav/side-navigation";
 
@@ -18,14 +18,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.toggleSideNav}>
-          <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
+        <button className="nav-button" onClick={this.toggleSideNav}>
+          <FontAwesomeIcon className="nav-icon" icon={faBars} />
         </button>
         <SideNav isCollapsed={this.state.isCollapsed}></SideNav>
-        <div
-          className="body"
-          style={{ marginLeft: !this.state.isCollapsed ? "250px" : "0" }}
-        >
+        <div className="body">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>I'm a spinning Chiho</p>

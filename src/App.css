@@ -7,6 +7,24 @@
   pointer-events: none;
 }
 
+.nav-button {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.nav-icon {
+  color: #424243;
+  width: 36px !important;
+  height: 36px !important;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -38,5 +56,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .nav-button {
+    visibility: hidden;
   }
 }
