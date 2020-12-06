@@ -5,14 +5,16 @@ class ExerciseDashboard extends React.Component {
     super(props);
 
     this.state = {
-      Greeting: "",
+      User: {
+        Name: "",
+        Phrase: "",
+      },
     };
   }
   componentDidMount() {
-    // Simple GET request using fetch
     fetch("http://localhost:8000/user")
       .then((response) => response.json())
-      .then((data) => this.setState({ Greeting: data.user }));
+      .then((data) => this.setState({ User: data }));
   }
 
   render() {
@@ -20,7 +22,8 @@ class ExerciseDashboard extends React.Component {
       <div className="App">
         <div className="App-header">
           <p>Lift Weights</p>
-          <p>{this.state.Greeting}</p>
+          <h1>{this.state.User.Name}</h1>
+          <p>{this.state.User.Phrase}</p>
         </div>
       </div>
     );
