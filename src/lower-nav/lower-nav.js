@@ -6,6 +6,7 @@ import {
   faDumbbell,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 class LowerNav extends React.Component {
   constructor(props) {
@@ -14,15 +15,15 @@ class LowerNav extends React.Component {
   render() {
     return (
       <div className="lower-nav">
-        <button>
+        <Link to="/exercise">
           <FontAwesomeIcon className="nav-icon" icon={faDumbbell} />
-        </button>
-        <button>
+        </Link>
+        <Link to="/">
           <FontAwesomeIcon className="nav-icon" icon={faHome} />
-        </button>
-        <button>
+        </Link>
+        <Link to="/diet">
           <FontAwesomeIcon className="nav-icon" icon={faUtensils} />
-        </button>
+        </Link>
       </div>
     );
   }
