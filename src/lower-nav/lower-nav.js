@@ -1,5 +1,11 @@
 import React from "react";
 import "./lower-nav.css";
+import {
+  faHome,
+  faUtensils,
+  faDumbbell,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class LowerNav extends React.Component {
   constructor(props) {
@@ -8,7 +14,15 @@ class LowerNav extends React.Component {
   render() {
     return (
       <div className="lower-nav">
-        <p style={{ color: "white" }}>I'm a lower Chiho</p>
+        <button>
+          <FontAwesomeIcon className="nav-icon" icon={faDumbbell} />
+        </button>
+        <button>
+          <FontAwesomeIcon className="nav-icon" icon={faHome} />
+        </button>
+        <button>
+          <FontAwesomeIcon className="nav-icon" icon={faUtensils} />
+        </button>
       </div>
     );
   }

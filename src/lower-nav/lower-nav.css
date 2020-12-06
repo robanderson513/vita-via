@@ -1,9 +1,21 @@
 .lower-nav {
   position: fixed;
   bottom: 0;
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.lower-nav > button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.nav-icon:active {
+  color: rgb(189, 189, 189);
 }
 
 @media only screen and (min-width: 375px) {
