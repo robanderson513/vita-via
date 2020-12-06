@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "./logo.svg";
 import "./App.css";
 import SideNav from "./side-nav/side-nav";
+import LowerNav from "./lower-nav/lower-nav";
 
 class App extends React.Component {
   constructor() {
@@ -35,6 +36,7 @@ class App extends React.Component {
               Learn React
             </a>
           </header>
+          <LowerNav></LowerNav>
         </div>
       </div>
     );
