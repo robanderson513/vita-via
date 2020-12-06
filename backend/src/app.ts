@@ -1,8 +1,10 @@
 import express from "express";
+import usersRouter from "./routes/user.routes";
+
+const PORT = 8000;
 
 const app = express();
-const port = 8000;
-app.get("/", (req, res) => {
-  res.send("The sedulous hyena ate the antelope!");
-});
-app.listen(port);
+
+app.use("/user", usersRouter);
+app.get("/", (req, res) => res.send("HomePage"));
+app.listen(PORT, () => console.log("Server started"));
