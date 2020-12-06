@@ -3,7 +3,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "./logo.svg";
 import "./App.css";
-import SideNav from "./sidenav/side-navigation";
+import SideNav from "./side-nav/side-nav";
 
 class App extends React.Component {
   constructor() {
