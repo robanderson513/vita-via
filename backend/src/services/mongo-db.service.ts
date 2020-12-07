@@ -6,11 +6,14 @@ export class MongoDBService {
   private mongoClient: MongoClient = new MongoClient(this.URL);
 
   /**
-   * Finds first instance of object based on collection and query passed in
+   * Finds first instance of a document based on collection and query passed in
    * @param collection
    * @param query
    */
-  protected async findObject<T>(collection: string, query: object): Promise<T> {
+  protected async findDocument<T>(
+    collection: string,
+    query: Partial<T>
+  ): Promise<T> {
     try {
       this.mongoClient.connect();
       const database = this.mongoClient.db(this.DB);
@@ -23,11 +26,14 @@ export class MongoDBService {
   }
 
   /**
-   * Finds any instance of object based on collection and query passed in
+   * Finds any instance of a document based on collection and query passed in
    * @param collection
    * @param query
    */
-  protected async findList<T>(collection: string, query: object): Promise<T[]> {
+  protected async findAllDocuments<T>(
+    collection: string,
+    query: Partial<T>
+  ): Promise<T[]> {
     try {
       this.mongoClient.connect();
       const database = this.mongoClient.db(this.DB);
