@@ -1,3 +1,7 @@
 import { User } from "../models/user.model";
 
-export const getUser = async (name: string): Promise<User> => new User(name);
+export class UserService {
+  public async getUser(name: string): Promise<User> {
+    return new User(name);
+  }
+}
