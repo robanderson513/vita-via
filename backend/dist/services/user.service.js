@@ -13,11 +13,13 @@ exports.UserService = void 0;
 const collection_enum_1 = require("../models/collection.enum");
 const mongo_db_service_1 = require("./mongo-db.service");
 class UserService extends mongo_db_service_1.MongoDBService {
+    /**
+     * Gets user info based on first name for now
+     * @param name
+     */
     getUser(name) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield this.findDocument(collection_enum_1.Collection.user, {
-                firstName: name,
-            });
+            return yield this.findDocument(collection_enum_1.Collection.user, { firstName: name });
         });
     }
 }

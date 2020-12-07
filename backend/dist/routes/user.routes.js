@@ -9,13 +9,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usersRouter = void 0;
+exports.userRoutes = void 0;
 const express_1 = require("express");
 const user_service_1 = require("../services/user.service");
 const _userService = new user_service_1.UserService();
-exports.usersRouter = express_1.Router();
-exports.usersRouter.get("/:name", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(req.params.name);
+exports.userRoutes = express_1.Router();
+/**
+ * Retrieves a user's info based on name
+ */
+exports.userRoutes.get("/:name", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const user = yield _userService.getUser(req.params.name);
     return res.status(200).send(user);
 }));
