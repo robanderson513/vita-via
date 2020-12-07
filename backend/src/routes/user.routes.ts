@@ -1,10 +1,13 @@
 import { Router } from "express";
-import * as UserService from "../services/user.service";
+import { UserService } from "../services/user.service";
 
-export const usersRouter = Router();
+const _userService = new UserService();
+export const userRoutes = Router();
 
-usersRouter.get("/", async (request, response) => {
-  const name = "Rob";
-  const user = await UserService.getUser(name);
-  return response.status(200).send(user);
+/**
+ * Retrieves a user's info based on name
+ */
+userRoutes.get("/:name", async (req, res) => {
+  const user = await _userService.getUser(req.params.name);
+  return res.status(200).send(user);
 });

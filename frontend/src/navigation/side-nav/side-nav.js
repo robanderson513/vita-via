@@ -12,6 +12,7 @@ class SideNav extends React.Component {
   toggleSideNav = () => {
     this.setState((state) => ({ isCollapsed: !state.isCollapsed }));
   };
+
   render() {
     return (
       <div>
