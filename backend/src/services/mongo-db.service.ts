@@ -10,7 +10,7 @@ export class MongoDBService {
    * @param collection
    * @param query
    */
-  public async findObject<T>(collection: string, query: object): Promise<T> {
+  protected async findObject<T>(collection: string, query: object): Promise<T> {
     try {
       this.mongoClient.connect();
       const database = this.mongoClient.db(this.DB);
@@ -27,7 +27,7 @@ export class MongoDBService {
    * @param collection
    * @param query
    */
-  public async findList<T>(collection: string, query: object): Promise<T[]> {
+  protected async findList<T>(collection: string, query: object): Promise<T[]> {
     try {
       this.mongoClient.connect();
       const database = this.mongoClient.db(this.DB);
