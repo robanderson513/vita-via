@@ -13,7 +13,7 @@ exports.userRoutes = void 0;
 const express_1 = require("express");
 const user_service_1 = require("../services/user.service");
 const _userService = new user_service_1.UserService();
-exports.userRoutes = express_1.Router();
+exports.userRoutes = (0, express_1.Router)();
 /**
  * Retrieves a user's info based on name
  */

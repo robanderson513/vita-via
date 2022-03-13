@@ -58,13 +58,13 @@
     transform: rotate(360deg);
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 415px) {
   .nav-button {
     visibility: hidden;
   }
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 415px) {
   .bottom-nav {
     visibility: hidden;
   }
