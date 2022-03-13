@@ -1,18 +1,21 @@
+
+
+import { User } from "@vita-via/interfaces";
 import React from "react";
 
-class ExerciseDashboard extends React.Component {
+class ExerciseDashboard extends React.Component<{}, {User: User}> {
   constructor(props) {
     super(props);
 
     this.state = {
       User: {
-        _id: "",
-        firstName: "",
-        lastName: "",
-        dob: "",
-        number: "",
-        email: "",
-        address: "",
+        _id: null,
+        firstName: null,
+        lastName: null,
+        dob: null,
+        number: null,
+        email: null,
+        address: null,
       },
     };
     this.logId = this.logId.bind(this);

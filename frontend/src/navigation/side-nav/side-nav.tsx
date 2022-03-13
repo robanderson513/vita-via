@@ -1,11 +1,14 @@
+
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./side-nav.css";
 
-class SideNav extends React.Component {
-  constructor() {
-    super();
+type componentState = { isCollapsed: boolean }
+class SideNav extends React.Component<{}, componentState> {
+  constructor(props) {
+    super(props);
     this.state = { isCollapsed: true };
   }
 
@@ -16,7 +19,7 @@ class SideNav extends React.Component {
     return (
       <div>
         <button className="nav-button" onClick={this.toggleSideNav}>
-          <FontAwesomeIcon className="nav-icon" icon={faBars} />
+          <FontAwesomeIcon className="nav-icon" icon={faBars as IconProp} />
         </button>
         <div
           className="side-nav"
