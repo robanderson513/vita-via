@@ -9,9 +9,8 @@ class SideNav extends React.Component {
     this.state = { isCollapsed: true };
   }
 
-  toggleSideNav = () => {
+  toggleSideNav = () =>
     this.setState((state) => ({ isCollapsed: !state.isCollapsed }));
-  };
 
   render() {
     return (
