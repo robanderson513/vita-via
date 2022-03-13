@@ -7,9 +7,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const user_routes_1 = require("./routes/user.routes");
 const PORT = 8000;
-const app = express_1.default();
-app.use(cors_1.default());
-app.get("/", (req, res) => res.send("No"));
+const app = (0, express_1.default)();
+app.use((0, cors_1.default)());
+app.get("/", (req, res) => res.send("API HomePage"));
 app.listen(PORT, () => console.log("Server started"));
 //*List of Routes
 app.use("/user", user_routes_1.userRoutes);
