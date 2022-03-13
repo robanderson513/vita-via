@@ -1,11 +1,14 @@
+
 import React from "react";
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faGlassWhiskey } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import "./water-widget.css";
 
-class WaterWidget extends React.Component {
+type componentState = { totalDrinks: number }
+class WaterWidget extends React.Component<{}, componentState> {
   constructor(props) {
     super(props);
 
@@ -24,7 +27,7 @@ class WaterWidget extends React.Component {
       <div>
         <div className="drinks-container">
           <p>Total Drinks: {this.state.totalDrinks}</p>
-          <FontAwesomeIcon icon={faGlassWhiskey} />
+          <FontAwesomeIcon icon={faGlassWhiskey as IconProp} />
         </div>
         <Stack spacing={2} direction="row">
           <Button
