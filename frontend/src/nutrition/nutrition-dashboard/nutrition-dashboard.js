@@ -1,9 +1,6 @@
 import React from "react";
 
 class NutritionDashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="App">

@@ -11,6 +11,6 @@ const UserSchema = new mongoose_1.Schema({
     email: { type: String },
     address: { type: String },
 });
-const User = mongoose_1.model("User", UserSchema);
+const User = (0, mongoose_1.model)("User", UserSchema);
 exports.User = User;
 //# sourceMappingURL=user.model.js.map
